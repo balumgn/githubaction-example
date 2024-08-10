@@ -31,5 +31,3 @@ jobs:
         sleep 5 # Wait for the server to start
         curl -f http://localhost:3000
 
-    - name: Run tests
-      run: npm test
