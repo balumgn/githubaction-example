@@ -42,3 +42,105 @@ jobs:
         run: |
           echo "Deploying application..."
           # Add your deployment commands here
+
+build1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+  deploy1:
+    runs-on: ubuntu-latest
+    needs: build1  # This ensures the 'deploy' job only runs if 'build' is successful
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy application
+        run: |
+          echo "Deploying application..."
+          # Add your deployment commands here
+
+build2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+  deploy2:
+    runs-on: ubuntu-latest
+    needs: build2  # This ensures the 'deploy' job only runs if 'build' is successful
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy application
+        run: |
+          echo "Deploying application..."
+          # Add your deployment commands here
+
+build3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+  deploy3:
+    runs-on: ubuntu-latest
+    needs: build3  # This ensures the 'deploy' job only runs if 'build' is successful
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy application
+        run: |
+          echo "Deploying application..."
+          # Add your deployment commands here
